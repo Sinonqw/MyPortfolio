@@ -43,7 +43,6 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   );
 };
 
-
 const About = () => {
   return (
     <AnimatedSection id="about" className="bg-gray-900 font-sans">
@@ -93,22 +92,21 @@ const About = () => {
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             <p>
-              Hi! I am Gosha, a Frontend Developer currently studying in Poland.
-              I love coding interactive websites and building projects that
-              combine **creativity and functionality**.
+              Hi I am Gosha a Frontend Developer currently studying in Poland. I
+              enjoy creating interactive websites and building projects that
+              combine creativity with functionality.
             </p>
             <p>
-              My goal is to **master frontend development**, create polished
-              projects, and eventually take on freelance and real-world
-              projects. I constantly learn new technologies and improve my
-              skills to deliver **high-quality work**.
+              My goal is to become highly skilled in frontend development make
+              polished projects and eventually work on freelance and real world
+              projects. I am always learning new technologies and improving my
+              skills to deliver high quality work.
             </p>
             <p>
-              {/* Key Skills: Secondary Neon Accent (Fuchsia) */}
               <strong className="text-fuchsia-400 drop-shadow-[0_0_2px_rgba(232,80,211,0.5)]">
                 Hard skills:
               </strong>{" "}
-              JavaScript, TypeScript, React, Next.js, Tailwind CSS, MongoDB.
+              JavaScript TypeScript React Next.js Tailwind CSS MongoDB
             </p>
           </div>
         </div>
