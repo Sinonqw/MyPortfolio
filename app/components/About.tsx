@@ -93,7 +93,7 @@ const About = () => {
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             <p>
-              Hi! I'm Gosha, a Frontend Developer currently studying in Poland.
+              Hi! I am Gosha, a Frontend Developer currently studying in Poland.
               I love coding interactive websites and building projects that
               combine **creativity and functionality**.
             </p>
