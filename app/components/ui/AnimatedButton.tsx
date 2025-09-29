@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-// Используем тип ComponentProps<typeof motion.button> для корректной типизации пропсов
 import type { ComponentProps } from "react";
 
 interface AnimatedButtonProps extends ComponentProps<typeof motion.button> {
@@ -14,10 +13,9 @@ const AnimatedButton = ({
   ...props
 }: AnimatedButtonProps) => (
   <motion.button
-    // Эффект неонового свечения (Fuchsia Glow) и масштабирование при наведении
     whileHover={{
       scale: 1.05,
-      boxShadow: "0 0 15px rgba(217, 70, 239, 0.7)", // Плавное фиолетовое свечение
+      boxShadow: "0 0 15px rgba(217, 70, 239, 0.7)",
     }}
     whileTap={{ scale: 0.95 }}
     className={`

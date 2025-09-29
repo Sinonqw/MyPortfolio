@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
+import Header from "./components/sections/Header/Header";
+import Hero from "./components/sections/Hero/Hero";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import About from "./components/About";
+import Contact from "./components/sections/Contact";
+import About from "./components/sections/About";
 
 const App = () => {
   useEffect(() => {
@@ -35,9 +35,7 @@ const App = () => {
       {/* Футер */}
       <footer className="bg-gray-950 py-8 border-t border-indigo-500/20">
         <div className="max-w-7xl mx-auto px-4 text-center text-gray-500">
-          <p>
-            &copy; {new Date().getFullYear()} Heorhii. All rights reserved.
-          </p>
+          <p>&copy; {new Date().getFullYear()} Heorhii. All rights reserved.</p>
           <div className="mt-2 text-sm">
             Built with React, Next.js and Framer Motion.
           </div>
