@@ -34,7 +34,7 @@ const About = () => {
             {...imageAnimation}
           >
             <img
-              src="/Me.jpeg"
+              src="/Me3.jpeg"
               alt="Profile"
               className="w-full h-full object-cover object-top filter grayscale hover:grayscale-0 transition-all duration-500"
               onError={(e) => {

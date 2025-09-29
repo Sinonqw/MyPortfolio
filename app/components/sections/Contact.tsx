@@ -20,18 +20,35 @@ const Contact = () => {
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setIsLoading(true);
     setStatus("Sending message...");
 
-    setTimeout(() => {
-      console.log("Form data:", formData);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus(
+          "Message sent successfully! I will get in touch with you shortly."
+        );
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setStatus("Failed to send message. Please try again later.");
+    } finally {
       setIsLoading(false);
-      setStatus("Message sent successfully! I will get in touch with you shortly.");
-      setFormData({ name: "", email: "", message: "" });
-    }, 2000);
+    }
   };
 
   return (

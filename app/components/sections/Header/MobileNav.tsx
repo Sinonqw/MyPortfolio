@@ -12,7 +12,7 @@ const MobileNav = ({ isOpen, items, closeMenu }: MobileNavProps) => {
     setTimeout(() => {
       const target = document.querySelector(href);
       target?.scrollIntoView({ behavior: "smooth" });
-    }, 300); // под твой transition={{ duration: 0.3 }}
+    }, 300); 
   };
 
   return (
