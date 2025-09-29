@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-// Импортируем все необходимые шрифты из next/font/google
 import { Geist, Geist_Mono, Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 
@@ -13,29 +12,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Определение Inter (основной текст) через next/font
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  display: 'swap',
+  display: "swap",
 });
 
-// Определение Montserrat (заголовки) через next/font
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
-  display: 'swap',
-  weight: ['700', '800', '900'],
+  display: "swap",
+  weight: ["700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "Neon Developer Portfolio", 
-  description: "A sleek, dark-themed portfolio built with Next.js and Tailwind CSS.",
+  title: "My Portfolio",
+  description:
+    "A sleek, dark-themed portfolio built with Next.js and Tailwind CSS.",
   icons: [
     {
-      rel: 'icon',
-      // Фавиконка в стиле Неон: кодовые теги (< />) с фуксиевым свечением.
-      url: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMiAzMic+CiAgPHJlY3Qgd2lkdGg9JzMyJyBoZWlnaHQ9JzMyJyBmaWxsPScjMGEwYTBhJy8+CiAgPHBhdGggZmlsbD0nbm9uZScgc3Ryb2tlPScjZDk0NmVmJyBzdHJva2Utd2lkdGg9JzMnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgZD0nTTEwIDhsLTYgOCA2IDhtMTItMTZsNiA4LTYgOCcvPgogIDxzdHlsZT4KICAgIHBhdGggeyBmaWx0ZXI6IGRyb3Atc2hhZG93KDAgMCAycHggI2Q5NDZlZikgZHJvcC1zaGFkb3coMCAwIDRweCAjZDk0NmVmKTsgfQogIDwvc3R5bGU+Cjwvc3ZnPg==',
+      rel: "icon",
+
+      url: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMiAzMic+CiAgPHJlY3Qgd2lkdGg9JzMyJyBoZWlnaHQ9JzMyJyBmaWxsPScjMGEwYTBhJy8+CiAgPHBhdGggZmlsbD0nbm9uZScgc3Ryb2tlPScjZDk0NmVmJyBzdHJva2Utd2lkdGg9JzMnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgZD0nTTEwIDhsLTYgOCA2IDhtMTItMTZsNiA4LTYgOCcvPgogIDxzdHlsZT4KICAgIHBhdGggeyBmaWx0ZXI6IGRyb3Atc2hhZG93KDAgMCAycHggI2Q5NDZlZikgZHJvcC1zaGFkb3coMCAwIDRweCAjZDk0NmVmKTsgfQogIDwvc3R5bGU+Cjwvc3ZnPg==",
     },
   ],
 };
@@ -48,7 +46,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Ручные импорты шрифтов удалены, так как они теперь обрабатываются next/font */}
         <style>{`
           /* Переменные шрифтов теперь автоматически генерируются next/font, 
              но мы оставляем стили для неонового свечения */
@@ -64,7 +61,6 @@ export default function RootLayout({
         `}</style>
       </head>
       <body
-        // Все переменные шрифтов добавлены в className
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${montserrat.variable} antialiased 
           bg-gray-950 text-gray-100 min-h-screen 
           transition-colors duration-500
