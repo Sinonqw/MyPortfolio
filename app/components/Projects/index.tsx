@@ -8,7 +8,7 @@ const Projects = () => {
     <AnimatedSection id="projects" className="bg-gray-900 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
-          className="text-5xl font-extrabold text-center text-white mb-16 pb-3 inline-block mx-auto tracking-wide border-b-4 border-fuchsia-400"
+          className="text-4xl font-extrabold text-center text-white mb-16 pb-3 inline-block mx-auto tracking-wide border-b-4 border-fuchsia-400"
         >
           My Projects
         </h2>
