@@ -4,6 +4,8 @@ import AnimatedButton from "../ui/AnimatedButton";
 import FormField from "../ui/FormField";
 import FormTextarea from "../ui/FormTextarea";
 import StatusMessage from "../ui/StatusMessage";
+// Импорт иконки Telegram
+import { FaTelegramPlane } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,11 +17,14 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const formRef = useRef(null);
 
+  const telegramLink = "https://t.me/Sinonan";
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
@@ -93,6 +98,20 @@ const Contact = () => {
           </AnimatedButton>
           {status && <StatusMessage status={status} />}
         </form>
+
+        <div className="mt-12 pt-6 border-t border-gray-700 flex justify-center">
+          <a
+            href={telegramLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-fuchsia-400 transition-colors duration-300 flex items-center space-x-3 group"
+          >
+            <FaTelegramPlane className="w-8 h-8 md:w-10 md:h-10" />
+            <span className="text-lg md:text-xl font-semibold opacity-80 group-hover:opacity-100">
+              Contact on Telegram
+            </span>
+          </a>
+        </div>
       </div>
     </AnimatedSection>
   );
