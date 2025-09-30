@@ -17,7 +17,7 @@ const projectsData = [
       "Responsive landing page for a pizza restaurant with a simple registration form.",
     technologies: "Next.js, Tailwind CSS",
     vercelLink: "https://pizzashop-two.vercel.app/",
-    githubLink: "https://github.com/Sinonqw/pizzashop",
+    githubLink: "https://github.com/Sinonqw/PizzaShop",
     imageText: "Pizza Landing Preview",
     imagePath: "/PizzaShop.png",
   },
