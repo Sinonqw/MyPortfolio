@@ -21,6 +21,18 @@ const projectsData = [
     imageText: "Pizza Landing Preview",
     imagePath: "/PizzaShop.png",
   },
+  {
+    id: 3,
+    title: "Admin Panel: Product List View",
+    description:
+      "A fully responsive product management list page featuring real-time data fetching (SWR), URL synchronization, client-side search, and performance optimization using useMemo and useCallback hooks. Implements separate views for desktop table and mobile cards.",
+    technologies:
+      "Next.js, TypeScript, NextAuth, SWR, Tailwind CSS, React Hooks (useMemo/useCallback)",
+    vercelLink: "https://project3.heorhii.xyz/",
+    githubLink: "https://github.com/Sinonqw/Admin-panel",
+    imageText: "Product List Page Preview",
+    imagePath: "/AdminPanel.png",
+  },
 ];
 
 export default projectsData;
